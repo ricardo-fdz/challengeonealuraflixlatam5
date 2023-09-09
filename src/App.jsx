@@ -53,7 +53,7 @@ function App() {
       <FullContainer>
         <Routes>
           <Route path="/" element={<Navigate to="/home" />} />
-          <Route path="/home" element={<DefaultPage videos={video} categories={categories} video={video} category={category} />} />
+          <Route path="/home" element={<DefaultPage videos={videos} categories={categories} video={video} category={category} />} />
           <Route path="/new-video" element={<AddVideo categories={categories} setCategories={setCategories} />} />
           <Route path="*" element={<div>404 Page not found</div>} />
         </Routes>
