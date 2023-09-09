@@ -1,7 +1,9 @@
-import React from "react";
-
 const Logo = () => {
-    return <div>Logo</div>;
+  return (
+    <>
+      <h1>▶️Vibeo</h1>
+    </>
+  );
 };
 
 export default Logo;
