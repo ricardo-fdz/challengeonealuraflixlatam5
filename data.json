@@ -17,145 +17,93 @@
       "description": "La mejores recetas, sorprende cada dia preparando las comidas mas originales y deliciosas ",
       "color": "#ffba05",
       "id": "3jt879789v38ilaruNtGxkdgN7n2w"
+    },
+    {
+      "name": "Tips ",
+      "description": "Conose los mejores consejos que te facilitaran la vida en la cocina",
+      "color": "#c0c0c0",
+      "id": "fsdafsd43234"
     }
   ],
   "videos": [
     {
       "link": "https://www.youtube.com/watch?v=iAeec6c26xA",
-
       "image": "https://i.ytimg.com/vi/iAeec6c26xA/mqdefault.jpg",
-
       "category": "Reposteria",
-
       "description": "",
-
       "title": "Reposteria Inicial Clase #1",
-
       "id": "sHm2TNhZKjzeeo1bqmKnsaX_1Vw"
     },
-
     {
       "link": "https://www.youtube.com/watch?v=wKIQWwDBqBQ",
-
       "image": "https://i.ytimg.com/vi/wKIQWwDBqBQ/mqdefault.jpg",
-
       "category": "Reposteria",
-
       "description": "INSCRIBETE SIN COSTO AL CURSO ...",
-
       "title": "❤️Repostería CLASE 3 | Capacitación Gratis🎁",
-
       "id": "7QpNoWf8kTgp9Z-qbXCwacoJIZo"
     },
-
     {
       "link": "https://www.youtube.com/watch?v=Cc7eqgJQcUI",
-
       "image": "https://i.ytimg.com/vi/Cc7eqgJQcUI/mqdefault.jpg",
-
       "category": "Reposteria",
-
       "description": "Bienvenidos al MARATÓN DE REPOSTERÍA SALUDABLE del 28 al 30 de agosto! •  En estas 3 clases aprenderás a elaborar ...",
-
       "title": "CLASE 1 | MARATÓN DE REPOSTERÍA SALUDABLE | 28, 29 y 30 de agosto",
-
       "id": "LNG7L7ljClFviyr-0yy5gcE1IGE"
     },
-
     {
       "link": "https://www.youtube.com/watch?v=YyQLfz6t1LA",
-
       "image": "https://i.ytimg.com/vi/YyQLfz6t1LA/mqdefault.jpg",
-
       "category": "Reposteria",
-
       "description": "Grupo VIP de interesadas en adquirir el curso: http://www.sulimiro.com/grupovip ó ...",
-
       "title": "REPLAY CLASE 3 - Viviendo de la repostería - Cómo ser una repostera próspera y destacada",
-
       "id": "xpJ_oiteXTp401nEhpvlNCpI2Kw"
     },
-
     {
       "link": "https://www.youtube.com/watch?v=dh1IAa2hrkk",
-
       "image": "https://i.ytimg.com/vi/dh1IAa2hrkk/mqdefault.jpg",
-
       "category": "Reposteria",
-
       "description": "ESTA ES LA CLASE 2 DEL DESAFÍO VIVIENDO DE LA REPOSTERÍA. Accede a las clases, materiales complementarios y ...",
-
       "title": "REPLAY CLASE 2 - Viviendo de la repostería - 3 Pilares para la repostería exitosa",
-
       "id": "3jt54S2v38ilbruNtGxkdgN7n2w"
     },
     {
       "link": "https://www.youtube.com/watch?v=BWsSdn52_Rg",
-
       "image": "https://i.ytimg.com/vi/BWsSdn52_Rg/mqdefault.jpg",
-
       "category": "Cooking",
-
       "description": "Question of the Day: Good morning guys. This is a compilation of my best videos which you can know some recipes even though ...",
-
       "title": "1000+ Miniature Cooking Food Recipe | Best Of Miniature Cooking Ideas | Tiny Cakes",
-
       "id": "JkxT89owuZp8CRFgNP4QhXkoYr8"
     },
-
     {
       "link": "https://www.youtube.com/watch?v=ZMWxCoZZ3qM",
-
       "image": "https://i.ytimg.com/vi/ZMWxCoZZ3qM/mqdefault.jpg",
-
       "category": "Cooking",
-
       "description": "Ever wondered how to make your Salmon Patties taste like mama made them? Look no further. This salmon cake recipe has fresh ...",
-
       "title": "Fried Salmon Patties - Canned Salmon - Old Fashioned Southern Cooking",
-
       "id": "n6PqJZyfNLTDnJCAZHrsk-1t310"
     },
-
     {
       "link": "https://www.youtube.com/watch?v=o1be4O8Ri9w",
-
       "image": "https://i.ytimg.com/vi/o1be4O8Ri9w/mqdefault.jpg",
-
       "category": "Cooking",
-
       "description": "Ever wondered how to make your Apple Fritters taste like mama made them? Look no further. This Apple Fritter is an 1927 recipe, ...",
-
       "title": "1927 Apple Fritter Recipe - Old Fashioned Fried Pastry",
-
       "id": "scS20BKLsT-TcZRsHtcaaRk9kPU"
     },
-
     {
       "link": "https://www.youtube.com/watch?v=qiKagfF-pDA",
-
       "image": "https://i.ytimg.com/vi/qiKagfF-pDA/mqdefault.jpg",
-
       "category": "Cooking",
-
       "description": "Welcome to our live cooking show, WELL YOUR WEEKEND! Today we are cooking up five delicious and easy, WFPB 10-Minute ...",
-
       "title": "10 MINUTE MEALS Cooking Show - Vegan Oil Free",
-
       "id": "nsH8eA8qblqhtz4x0-CLi1a8GKo"
     },
-
     {
       "link": "https://www.youtube.com/watch?v=HFsHnEqBm4M",
-
       "image": "https://i.ytimg.com/vi/HFsHnEqBm4M/mqdefault.jpg",
-
       "category": "Cooking",
-
       "description": "Suhail reveals the secret hummus recipe that was inherited from family to family and perfected with each generation. This recipe is ...",
-
       "title": "3-Ingredient Hummus Recipe from Nazareth",
-
       "id": "jyALnhlOJg1NNOeZPej5Z-4Bmfk"
     },
     {
@@ -197,6 +145,14 @@
       "description": "TIMESTAMPS~~ 00:00:00 - Dilkhush Bread 00:54:16 - Checkered Slice Cake 01:53:28 - Coin Biscuit Without Egg 01:36:33 ...",
       "title": "Eggless Bakery  Free Online Workshop | How to make Bread, Cakes &amp; Biscuit | 5 Recipes",
       "id": "4ugL-JTJWYeCw-r3vq_qeLZ--xw"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=SgZxHYauv-c",
+      "image": "https://i.ytimg.com/vi/SgZxHYauv-c/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD-Ch3H7abfkKeswe-0zdB71axbVQ",
+      "category": "Bakery",
+      "description": "Aprende a preparar auténtico, exquisito brioche de la abuela. Ideal para comer con mermelada, chocolate, un vaso de leche,  queso y foie.  Amasado a mano y en al máquina. Explicación detallada. ",
+      "title": " BRIOCHE de la abuela ¡Exquisito! 🇬🇧Grandmother's brioche ",
+      "id": "12321dfasfdas231adfdfas"
     }
   ]
 }

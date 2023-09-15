@@ -21,6 +21,12 @@ const ButtonStyled = styled(Button)`
   background-color: ${(props) => props.colored};
 `;
 
+const CardStyled = styled.div`
+  @media (max-width: 768px) {
+    display: none !important;
+  }
+`;
+
 const Banner = ({ video, category }) => {
   console.log(category);
   return (
@@ -32,7 +38,9 @@ const Banner = ({ video, category }) => {
         <h2>{category.description.substring(0, 40) + "..."}</h2>
         <p>{video.description}</p>
       </div>
-      <CardVideo video={video} color={category.color} />
+      <CardStyled>
+        <CardVideo video={video} color={category.color} />
+      </CardStyled>
     </BannerContainer>
   );
 };

@@ -6,7 +6,9 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import { Box } from "@mui/material";
 import styled from "@emotion/styled";
 import { useEffect, useState } from "react";
-import { listaCategorias, listaVideos } from "./services/services";
+import {  onGetCategories, onGetVideos } from "./services/services";
+import AddCategory from "./pages/AddCategory";
+import {} from "firebase/firestore";
 
 const FullContainer = styled(Box)`
   min-height: 80vh;
@@ -15,36 +17,31 @@ const FullContainer = styled(Box)`
 `;
 
 function App() {
-
   const [videos, setVideos] = useState([]);
   const [categories, setCategories] = useState([]);
 
   const [video, setVideo] = useState({
-    title: ''
+    title: "",
   });
-  const [category, setCategory] = useState({});
+
+  const [category, setCategory] = useState({ description: "" });
 
   useEffect(() => {
-    listaVideos().then(
-      (res) => {
-        setVideos(res);
-        setVideo(res.find(video=>video.category=='Bakery'))
-      },
-      (err) => {
-        console.log(err)
-      }
-    );
+    onGetVideos((querySnapshot) => {
+      setVideos([]);
+      querySnapshot.forEach((doc) => {
+        if(doc.data().category === "Bakery") setVideo(doc.data());
+        setVideos(v=>[...v,{...doc.data(),id: doc.id}])
+      });
+    });
 
-    listaCategorias().then(
-      (res) => {
-        setCategories(res);
-        console.log(res.find(category=>category.name=='Bakery'))
-        setCategory(res.find(category=>category.name=='Bakery'))
-      },
-      (err) => {
-        console.log(err)
-      }
-    );
+    onGetCategories((querySnapshot) => {
+      setCategories([])
+      querySnapshot.forEach((doc) => {
+        if(doc.data().name === "Bakery") setCategory(doc.data());
+        setCategories(c=>[...c,{...doc.data(), id: doc.id}])
+      });
+    });
   }, []);
 
   return (
@@ -53,8 +50,32 @@ function App() {
       <FullContainer>
         <Routes>
           <Route path="/" element={<Navigate to="/home" />} />
-          <Route path="/home" element={<DefaultPage videos={videos} categories={categories} video={video} category={category} />} />
-          <Route path="/new-video" element={<AddVideo categories={categories} setCategories={setCategories} />} />
+          <Route
+            path="/home"
+            element={
+              <DefaultPage
+                videos={videos}
+                categories={categories}
+                video={video}
+                category={category}
+              />
+            }
+          />
+          <Route
+            path="/new-video"
+            element={
+              <AddVideo categories={categories} setCategories={setCategories} />
+            }
+          />
+          <Route
+            path="/new-category"
+            element={
+              <AddCategory
+                categories={categories}
+                setCategories={setCategories}
+              />
+            }
+          />
           <Route path="*" element={<div>404 Page not found</div>} />
         </Routes>
       </FullContainer>

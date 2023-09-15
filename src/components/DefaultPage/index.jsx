@@ -10,19 +10,22 @@ const CarouselContainer = styled.div`
   gap: 2rem;
 `;
 
-const DefaultPage = ({videos, categories, video, category}) => {
+const DefaultPage = ({ videos, categories, video, category }) => {
   return (
     <>
       <Banner video={video} category={category} />
       <CarouselContainer>
-        {categories.map((category, idx) => (
-          <Carousel
-            idx={idx}
-            key={category.id}
-            category={category}
-            videos={videos.filter((video) => video.category === category.name)}
-          />
-        ))}
+        {categories.map((category, idx) => {
+          console.log(videos.filter((video) => video.category == category.name).length)
+          return videos.some((video) => video.category == category.name) && (
+            <Carousel
+              idx={idx}
+              key={category.id}
+              category={category}
+              videos={videos.filter((video) => video.category == category.name)}
+            />
+          );
+        })}
       </CarouselContainer>
     </>
   );

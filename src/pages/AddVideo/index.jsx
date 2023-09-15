@@ -9,9 +9,11 @@ import {
   Typography,
 } from "@mui/material";
 import { useState } from "react";
+import { crearVideo, saveVideo } from "../../services/services";
+import { NavLink } from "react-router-dom";
 
 const FormStyle = styled.form`
-  width: 70vh;
+  max-width: 70vh;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -23,13 +25,18 @@ const ButtonSecondary = styled(Button)`
   background-color: #9e9e9e;
 `;
 
+const LinkStyled = styled(NavLink)`
+  text-decoration: none;
+  color: inherit;
+`;
+
 const ButtonsContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 `;
 
-const NuevoVideo = ({ categories, setVideos }) => {
+const NuevoVideo = ({ categories }) => {
   const [data, setData] = useState({
     link: "",
     image: "",
@@ -41,8 +48,10 @@ const NuevoVideo = ({ categories, setVideos }) => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    e.target.reset();
-    console.log(data);
+    saveVideo(data).then(doc=>{
+      e.target.reset();
+      console.log(doc.id);
+    })
   };
 
   const changeHandler = (e) => {
@@ -62,7 +71,14 @@ const NuevoVideo = ({ categories, setVideos }) => {
   };
 
   return (
-    <Container sx={{ paddingTop: "30px", color: "white", textAlign: "center" }}>
+    <Container
+      sx={{
+        paddingTop: "30px",
+        color: "white",
+        textAlign: "center",
+        marginBottom: "50px",
+      }}
+    >
       <Typography variant="h4">Nuevo Video</Typography>
       <FormStyle action="" onSubmit={submitHandler}>
         <TextField
@@ -89,10 +105,9 @@ const NuevoVideo = ({ categories, setVideos }) => {
           variant="filled"
           label="Categoría"
           sx={{ textAlign: "left", color: "lightgray" }}
+          value={data.category}
         >
-          <MenuItem value="" disabled>
-            <em>Selecciona una categoría</em>
-          </MenuItem>
+
           {categories.map((category) => (
             <MenuItem key={category.id} value={category.name}>
               {category.name}
@@ -125,15 +140,16 @@ const NuevoVideo = ({ categories, setVideos }) => {
               Limpiar
             </ButtonSecondary>
           </div>
-
-          <Button
-            variant="contained"
-            onClick={() => {
-              console.log("To new category");
-            }}
-          >
-            Nueva Categoría
-          </Button>
+          <LinkStyled to={"/new-category"}>
+            <Button
+              variant="contained"
+              onClick={() => {
+                console.log("To new category");
+              }}
+            >
+              Nueva Categoría
+            </Button>
+          </LinkStyled>
         </ButtonsContainer>
       </FormStyle>
     </Container>

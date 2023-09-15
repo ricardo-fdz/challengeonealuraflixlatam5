@@ -1,4 +1,3 @@
-import React from "react";
 import Logo from "../Logo";
 import styled from "@emotion/styled";
 
@@ -18,6 +17,10 @@ const Credits = styled.div`
   display: flex;
   flex-direction: row;
   gap: 2rem;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center; 
+  }
 `;
 
 const Footer = () => {
