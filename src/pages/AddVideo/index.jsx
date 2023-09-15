@@ -48,9 +48,8 @@ const NuevoVideo = ({ categories }) => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    saveVideo(data).then(doc=>{
+    saveVideo(data).then(()=>{
       e.target.reset();
-      console.log(doc.id);
     })
   };
 
@@ -143,9 +142,6 @@ const NuevoVideo = ({ categories }) => {
           <LinkStyled to={"/new-category"}>
             <Button
               variant="contained"
-              onClick={() => {
-                console.log("To new category");
-              }}
             >
               Nueva Categoría
             </Button>

@@ -16,14 +16,17 @@ const DefaultPage = ({ videos, categories, video, category }) => {
       <Banner video={video} category={category} />
       <CarouselContainer>
         {categories.map((category, idx) => {
-          console.log(videos.filter((video) => video.category == category.name).length)
-          return videos.some((video) => video.category == category.name) && (
-            <Carousel
-              idx={idx}
-              key={category.id}
-              category={category}
-              videos={videos.filter((video) => video.category == category.name)}
-            />
+          return (
+            videos.some((video) => video.category == category.name) && (
+              <Carousel
+                idx={idx}
+                key={category.id}
+                category={category}
+                videos={videos.filter(
+                  (video) => video.category == category.name
+                )}
+              />
+            )
           );
         })}
       </CarouselContainer>

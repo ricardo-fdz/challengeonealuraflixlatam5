@@ -28,7 +28,6 @@ const CardStyled = styled.div`
 `;
 
 const Banner = ({ video, category }) => {
-  console.log(category);
   return (
     <BannerContainer color={category.color}>
       <div>

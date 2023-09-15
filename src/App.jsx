@@ -10,6 +10,11 @@ import {  onGetCategories, onGetVideos } from "./services/services";
 import AddCategory from "./pages/AddCategory";
 import {} from "firebase/firestore";
 
+//TODO Remplazar default page por home
+//TODO Pasar la lógica principal a default page 
+//TODO Implementar validaciones en los formularios
+//TODO 
+
 const FullContainer = styled(Box)`
   min-height: 80vh;
   background-color: #1e1e1e;
@@ -19,11 +24,9 @@ const FullContainer = styled(Box)`
 function App() {
   const [videos, setVideos] = useState([]);
   const [categories, setCategories] = useState([]);
-
   const [video, setVideo] = useState({
     title: "",
   });
-
   const [category, setCategory] = useState({ description: "" });
 
   useEffect(() => {
